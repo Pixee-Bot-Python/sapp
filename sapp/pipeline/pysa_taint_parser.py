@@ -128,7 +128,7 @@ class Parser(BaseParser):
     def get_json_from_file_offset(self, path: str, offset: int) -> Dict[str, Any]:
         with open(path) as fh:
             fh.seek(offset)
-            return json.loads(fh.readline())
+            return json.loads(fh.readline(5_000_000))
 
     def _parse_entries(
         self, handle: IO[str]
