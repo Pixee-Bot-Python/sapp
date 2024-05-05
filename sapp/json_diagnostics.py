@@ -144,7 +144,7 @@ class JSONDiagnostics:
                     else:
                         entries.append(errors)
                 else:
-                    logger.warn(f"No json found at {path, offset}")
+                    logger.warning(f"No json found at {path, offset}")
 
         return entries
 
