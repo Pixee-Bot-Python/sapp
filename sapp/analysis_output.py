@@ -85,7 +85,7 @@ class AnalysisOutput:
         self.metadata = metadata
         self.tool = tool
 
-        if filename_specs is [] and file_handle and hasattr(file_handle, "name"):
+        if filename_specs == [] and file_handle and hasattr(file_handle, "name"):
             self.filename_specs = [file_handle.name]
 
     def __str__(self) -> str:
